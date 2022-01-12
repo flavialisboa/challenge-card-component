@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | NFT preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    * { background-color: hsl(217, 54%, 11%); font-family: 'Outfit', sans-serif; }
+    img { background-color: transparent; }
+    p { font-size: 18px; }
+    div { background-color: transparent; }
+    body { display:flex; flex-direction:column; }
+    footer { position:absolute; bottom: 0; width: 99%; height: 40px; }
+    .hr { border: 0; border-top: 0.5px solid hsl(215, 51%, 70%); opacity: 0.5; }
+    .card { background-color: hsl(216, 50%, 16%);  position: absolute;
+    top: 50%; left: 50%; margin-right: -50%; transform: translate(-50%, -50%);
+    padding: 1.3rem; border-radius: 0.5rem; line-height: 25px; width: 250px; box-shadow: 0em 1em 0em 1em hsl(216, 56%, 10%); }
+    .text-align { text-align: center; }
+    .cube { width: 100%; border-radius: 0.5rem; }
+    .transparent { background-color: transparent; }
+    .p-ethereum { color: hsl(178, 100%, 50%); }
+    .soft-blue { color: hsl(215, 51%, 70%); }
+    .white { color: hsl(0, 0%, 100%); }
+    .bold { font-weight: 600; }
+    .light { font-weight: 300; }
+    .smaller-font { font-size: 15px; }
+    .flex-space { justify-content: space-between; }
+    .flex { display: flex; }
+    .icons { margin-right: 5px;}
+    .align-center { align-items: center; }
+    .avatar { width: 13%; margin-right: 12px; border: 1.5px solid white; border-radius: 50%;  }
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    .container { position: relative; }
+    .overlay-bg { position: absolute; top: 0; bottom: 0; left: 0; right: 0; height: 97%; width: 100%; opacity: 0; 
+      transition: .5s ease; background-color: hsl(178, 100%, 50%); border-radius: 0.5rem;}
+    .overlay { position: absolute; top: 0; bottom: 0; left: 0; right: 0; height: 100%; width: 100%; opacity: 0;
+      transition: .5s ease; border-radius: 0.5rem; }
+    .container:hover .overlay { opacity: 1; }
+    .container:hover .overlay-bg { opacity: 0.5; }
+    .eye-img { color: white; font-size: 20px; position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); text-align: center; }
+    .hover-cian:hover { color: hsl(178, 100%, 50%); transition: .5s ease; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="container">
+      <img class="cube" src="./images/image-equilibrium.jpg" alt="Translucent cube">
+      <div class="overlay-bg"></div>
+      <div class="overlay">
+        <img class="eye-img" src="./images/icon-view.svg" alt="">
+      </div>
+    </div>
+      <p class="white transparent bold hover-cian">Equilibrium #3429</p>
+    
+      <p class="soft-blue transparent light smaller-font">Our Equilibrium collection promotes balance and calm.</p>
+    
+      <div class="flex flex-space">
+        <div class="flex align-center">
+          <img class="icons" src="./images/icon-ethereum.svg" alt="">
+          <p class="p-ethereum bold smaller-font transparent"> 0.041 ETH</p>
+        </div>
+      
+        <div class="flex align-center">
+          <img class="icons" src="./images/icon-clock.svg" alt="">
+          <p class="soft-blue smaller-font transparent"> 3 days left</p>
+        </div>
+      </div>
+      
+      <hr class="hr">
+
+      <div class="flex align-center">
+        <img class="avatar" src="./images/image-avatar.png" alt="">
+        <p class="soft-blue transparent smaller-font"> Creation of <span class="white transparent hover-cian">Jules Wyvern</span></p>
+      </div>
+  </div>
+
+  <footer>
+    <div class="attribution white">
+      <h3>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Flavia Lisboa</a>.</h3>
+    </div>
+  </footer>
+</body>
+</html>
